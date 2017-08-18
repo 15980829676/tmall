@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>一起揭秘天猫情话工场</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!-- 默认使用最新浏览器 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"><!-- 不被网页(加速)转码 -->
+    <meta name="robots" content="index,follow"> <!-- 搜索引擎抓取 -->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="full-screen" content="yes"><!-- UC强制全屏 -->
+    <meta name="browsermode" content="application"><!-- UC应用模式 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+    <meta name="x5-fullscreen" content="true"><!-- QQ强制全屏 -->
+    <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no"><!-- 忽略页面中的数字识别\email识别\地址识别 -->
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						if(clientWidth >= 640) {
+							docEl.style.fontSize = '100px';
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+						}
+					};
+
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+			<link rel="stylesheet" href="css/flex.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	</head>
+	<body id="t">
+	<script src="js/wv.js"></script>
+
+	
+<audio id="xint" style="display:none" src="" autoplay="true" preload>
+</audio>
+<!--这个是所有页的音频-->
+
+<!--这个是加载页的音频-->
+<audio id="xiuxiu" style="display:none" src="mp3/bj-muc.mp3" autoplay="autoplay" preload loop="loop">
+</audio>
+<script>
+/*
+function autoPlayAudio() {
+        wx.config({
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            var globalAudio=document.getElementById("xiuxiu");
+            globalAudio.play();
+        });
+};
+// 解决ios音乐不自动播放的问题
+	autoPlayAudio();*/
+    document.getElementById('xiuxiu').play(); 
+    //必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效 
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('xiuxiu').play(); 
+
+    }, false);
+
+</script>
+	<div class="mol">
+		<!--音乐
+		<div class="music active">
+		<i></i>
+    	<i></i>
+    	<i></i>
+    	<i></i>
+    	<i></i>
+    	<i></i>
+		 <audio id="music" style="display: none" src="mp3/da.mp3" autoplay="autoplay" loop="loop"></audio>
+		</div>-->
+
+
+  <!--loading-->
+   <div class="loading ">
+<div class="load ">
+<div class="lo-d">
+	<!--黑色遮罩文字-->
+	<div class="load-zhe"></div>
+	<div id="go-two" class="loader-inner ball-scale">
+		<div></div>
+		<span class="yuan_z"></span>
+	</div>
+</div>
+</div>
+   	
+   </div>
+   <!--引导页-->
+	<div id="guide1">
+		<div id="guide">
+			<div class="gear" id="gear" style=" left: 0;">
+				<img src="img/bj.png" />
+				<div class="git_w">
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+				<!--齿轮-->
+				<div class="cl"></div>
+				<div class="love"></div>
+				<div class="tian">
+					<!--音符-->
+					<div class="musc">
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</div>
+					<!--对话-->
+					<div class="happ"></div>
+					<!--开门-->
+					<div class="men" id="men" onclick="dian()">
+						<div class="men-t ball-scale">
+							<div></div>
+							<span class="yuan_z"></span>
+						
+						</div>
+					</div>
+					<!--指针-->
+					<div class="zhizhen">
+						<!--1-->
+						<div class="zhi-1">
+							<div class="b-zhi "></div>
+							<span class="fen-1"></span>
+							<span class="shi-1"></span>
+						</div>
+						<!--2-->
+						<div class="zhi-2">
+							<div class="b-zhi-2 "></div>
+							<span class="fen-2"></span>
+							<span class="shi-2"></span>
+						</div>
+						<!--3-->
+						<div class="zhi-3">
+							<div class="b-zhi-3 "></div>
+							<span class="fen-3"></span>
+							<span class="shi-3"></span>
+						</div>
+
+					</div>
+					<!--指针二-->
+					<div class="zhizhen-1">
+						<div class="zhi-4">
+							<div class="b-zhi-4 "></div>
+							<span class="fen-4"></span>
+							<span class="shi-4"></span>
+						</div>
+
+					</div>
+					<!--雷达-->
+					<div class="leida">
+
+
+					</div>
+					<!--升降级-->
+					<div class="shenjian" id="shenjian">
+						<div class="shj-1"><img src="img/jian1.png"></div>
+						<div class="shj-2" style="display:none;"><img src="img/jian2.png"></div>
+						<div class="shj-3" style="display:none;"><img src="img/jian3.png"></div>
+						<div class="shj-4" style="display:none;"><img src="img/jian4.png"></div>
+					</div>
+					<!--喇叭-->
+					<div class="lba"></div>
+
+				</div>
+			</div>
+			<div class="ba"></div>
+		</div>
+	</div>
+   <!--内容区-->
+
+	<!--第一屏-->
+	<div id="content" style="display:none">
+
+		<div class="two_ab">
+			<div class="two-yem">
+				<div class="one-1 one-one" id="one-p"></div>
+				<div id="one2" class="one-1 one-2 ">
+					<!--心-->
+					<i id="xin1"></i>
+					<i id="xin2"></i>
+				
+
+				</div>
+				<div id="plus" class="one-1 one-3">
+					<div class="xindian_03"></div>
+				<div class="ctt_03">
+					<img src="img/w-wu0.png"/>
+					<img src="img/w-wu1.png"/>
+					<img src="img/w-wu2.png"/>
+					<img src="img/w-wu3.png"/>
+					<img src="img/w-wu4.png"/>
+					</div>
+					<div class="tupian-1" id="tupian-1"></div>
+				</div>
+				<div class="one-1 one-4">
+				
+					<div class="tupian-2" id="tupian-2"></div>
+					<div class="tupian-3" id="tupian-3"></div>
+					<div class="tupian-4" id="tupian-4"></div>
+			
+				
+				</div>
+				<div class="one-1 one-5">
+					<div class="ctt_07">
+						<div class="am"></div>
+						<div class="af"></div>
+						<div class="as"></div>
+					</div>
+				</div>
+				<div id="one3" class="one-1 one-6">
+					<i id="one3-1"></i>
+					<i id="one3-2"></i>
+					<i id="one3-3"></i>
+					<span class="hs-tu">
+					   <img src="img/hs-0.png"/>
+				       <img src="img/hs-1.png"/>
+					   <img src="img/hs-2.png"/>
+					</span>
+					<span class="hs-x flsh"></span>
+					<span class="sl-s flsh"></span>
+					<div class="ctt_11">
+						<div class="bm"></div>
+						<div class="bf"></div>
+						<div class="bs"></div>
+					</div>
+
+				</div>
+				<div id="one4" class="one-1 one-7">
+					<i id="one4-1"></i>
+					<i id="one4-2"></i>
+					<i id="one4-3"></i>
+					<i id="one4-4"></i>
+					<span class="ci-lu"></span>
+				<span class="ci-lu-s "></span>
+				</div>
+				<div id="one5" class="one-1 one-8">
+					<i></i>
+					<i></i>
+					<span class="ci-lu"></span>
+				<span class="ci-lu-s"></span>
+				</div>
+				<div id="one7" class="one-1 one-9">
+					<i></i>
+					<i></i>
+					<div class="ctt_15">
+						<div class="cm"></div>
+						<div class="cf"></div>
+						<div class="cs"></div>
+					</div>
+				</div>
+
+				<div id="one8" class="one-1 one-10">
+					<i></i>
+					<i></i>
+					<span class="two-pw" id="two-pw">
+						<img src="img/two-pw1.png">
+						<img src="img/two-pw2.png" style="display:none">
+						<img src="img/two-pw3.png" style="display:none">
+						<img src="img/two-pw4.png" style="display:none">
+						<img src="img/two-pw5.png" style="display:none">
+					</span>
+					<!--表转  猫挡-->
+				<div class="biao">
+   <div class="d"></div>
+   <div class="e">
+      <div class="ef"></div>
+      <div class="es"></div>
+   </div>
+   <div class="m"></div>
+</div>
+				</div>
+
+			<div id="one9" class="one-1 one-11">
+      <i></i>
+      <i></i>
+      <div id="s-4"></div>
+      <div id="s-3"></div>
+      <div id="s-2"></div>
+      <div id="s-1"></div>
+      <div id="s-0"></div>
+      <span class="flsh" id="x-1"></span>
+      <span class="flsh" id="x-2"></span>
+   
+   </div>
+
+				<div id="one10" class="one-1 one-12">
+					<i></i>
+					<i></i>
+					<div id="sd-0"></div>
+					<div id="sd-1"></div>
+					<div id="sd-2"></div>
+					<div id="sd-3"></div>
+					<div id="sd-4"></div>
+				
+				</div>
+
+				<div id="one11" class="one-1 one-13">
+					<i id="one-z1"></i>
+					<i id="one-z2"></i>
+					<span class="two-car" id="two-car">
+						<img src="img/two-car1.png">
+						<img src="img/two-car2.png" style="display:none">
+						<img src="img/two-car3.png" style="display:none">
+						<img src="img/two-car4.png" style="display:none">
+						<img src="img/two-car5.png" style="display:none">
+					</span>
+			
+				</div>
+
+				<div id="one12" class="one-1 one-14">
+					<i></i>
+				
+						<div class="ctt_19">
+						<div class="fei10"></div>
+						<div class="fei9"></div>
+						<div class="fei8"></div>
+						<div class="fei7"></div>
+						<div class="fei6"></div>
+						<div class="fei5"></div>
+						<div class="fei4"></div>
+						<div class="fei3"></div>
+						<div class="fei2"></div>
+						<div class="fei1"></div>
+					</div>
+					
+				</div>
+				<div class="one-1 one-15">
+					<div class="oclick">
+						<div class="two-my ball-scale">
+								<div></div>
+								<span class="yuan_z"></span>
+							</div>
+					</div>
+					<div class="two-ock-z">正在进入</br>2号场房</div>
+					<div class="three"></div>
+				</div></div>
+		</div>
+	</div>
+
+	<!--倒二-->
+	<div id="content1" style="display:none">
+	<!--轮播-->
+			<div id="row" class="row" style="width:4.84rem;height:4.84rem; position:absolute;top:0;left0;display:none;">
+			<div id="caca" class="caca">
+			  <div class="caca-ca"></div>
+			</div>
+			<div class="swiper-container" style="width:6rem;position:relative;top:2.5rem;">
+			<span class="nex-z"></span>
+			<span class="nex-r"></span>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/bat1_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat2_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat3_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat4_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat5_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat6_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat7_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat8_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat9_03.png"></div>
+					<div class="swiper-slide"><img src="img/bat10_03.png"></div>
+					<div class="swiper-slide" id="row-cent">
+					<img src="img/w-threemen.png">
+					<div class="two-ock-z3">正在进入</br>3号场房</div>
+					<div class="three-op">
+					<div class="three-men ball-scale">
+		             <div></div>
+		              <span class="yuan_z"></span>
+	               </div>
+				   </div>
+				   <div class="w-htrr"></div>
+					</div>
+				</div>
+		  <div class="swiper-pagination"></div>
+			</div>
+
+		
+	
+
+
+	</div>
+<div class="three-1">
+   <div class="three-on-1" id="content1-top"></div>
+</div>
+<div class="three-bottom">
+   <!--点-->
+   <div class="three-dian" id="three-dian">
+	   <div></div>
+	   <div></div>
+	   <div></div>
+   </div>
+   <!--哇哈-对话框-->
+   <div class="three-01" id="three-01"></div>
+   <!--烟雾-->
+   <div class="three-02">
+	   <img src="img/three-02.png">
+	   <img src="img/three-03-2.png" style="display:none;width:100%;">
+	   <img src="img/three-03-3.png" style="display:none;width:100%;">
+	   <img src="img/three-03-4.png" style="display:none;width:100%;">
+	   <img src="img/three-03-5.png" style="display:none;width:100%;">
+   </div>
+   <!--对话框-->
+   <div class="three-z03" id="three-z03">
+	   <div></div>
+	   <div></div>
+   </div>
+   <!--对话框-->
+   <div class="three-06" id="three-06"></div>
+   <!--对话框-->
+   <div class="three-03" id="three-03"></div>
+	<!--提示-->
+	<div class="shu"></div>
+	<!--书-->
+   <div class="three-shu"></div>
+</div>
+	<!--轮播-->
+	
+		<!--  <div class="row-cent"></div>-->
+
+
+
+
+
+</div>
+	<!--我是最后一页-->
+	<div id="wei" style="display:none">
+		<div class="three-1" style="background:url('img/wei_02.png') no-repeat;background-size: contain;">
+			<div class="three-on-1" id="wei-top"></div>
+		</div>
+		<div class="wei-cent">
+			<!--对话框-->
+			<div class="wei-01" id="wei-01"></div>
+			<!--对话框-->
+			<div class="wei-02" id="wei-02"></div>
+			<!--音符-->
+			<div class="yinfu">
+				   <div class="yf1"></div>
+				   <div class="yf2"></div>
+				   <div class="yf3"></div>
+				   <div class="yf4"></div>
+				   <div class="yf5"></div>
+				   <div class="yf6"></div>
+				   <div class="yf7"></div>
+				   <div class="yf8"></div>
+				   <div class="yf9"></div>
+				   <div class="yf10"></div>
+				   <div class="yf11"></div>
+				   <div class="yf12"></div>
+				   <div class="yf13"></div>
+				   <div class="yf14"></div>
+				</div>
+			<!--胶片-->
+			<div class="wei-03">
+				<div class="wei-03-n"></div>
+				<div class="wei-03-t"></div>
+			</div>
+			<!--闪一闪-->
+			<div class="wei-04"></div>
+			<!--对话框-->
+			<div class="wei-05" id="wei-05"></div>
+			<!--对话框-->
+			<div class="wei-06" id="wei-06"></div>
+			<!--机器影子-->
+			<div class="wei-07"></div>
+			<!--对话爱心-->
+			<div class="wei-08" id="wei-07" style="opacity:0;"></div>
+			<!--动框-点击-->
+			<div class="wei-09" id="wei-09">
+			<div class="wu-d ball-scale">
+		             <div></div>
+		              <span class="yuan_z"></span>
+	               </div>
+			</div>
+			<!--提示点击图-->
+			<div class="shu2"></div>
+			<!--弹窗-->
+			<div class="row" id="row1" style="display:none">
+				<div class="wei-11">
+					<div class="wei-11-1"></div>
+					<div class="wei-11-2"></div>
+					<div class="wei-11-3"><img src="img/erwei_03.jpg" style="width:100%;"></div>
+				</div>
+			</div>
+		</div>
+		<!--广告-->
+		<div class="wei-10"></div>
+	</div>
+</div>
+
+<input id="hidden" type="hidden" value="0"/>
+<script type="text/javascript" src="js/Thell.js" ></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+
+<script type = "text/javascript">
+   var swiper = new Swiper('.swiper-container', {
+   observer:true,
+		 observeParents:true,
+        pagination: '.swiper-pagination',
+		
+     effect : 'fade',
+fade: {
+  crossFade: false,
+},
+    });
+    $('.load-zhe').animate({'top':'2'+'rem'},9000,function(){
+	    $(this).css('zIndex','1');
+	});
+  
+    //重力感应
+ function readyFn() {
+        'use strict';
+        var dom = document.querySelector('.gear'),
+            img = dom.querySelector('img');
+        var IMG_W = img.width;
+           // IMG_H = img.height;
+        var WIN_W = document.documentElement.clientWidth;
+          //  WIN_H = document.documentElement.clientHeight;
+        var timefragment = 0,               // 时间片计时
+            nowts = 0;                      // 当前时间
+        // 设置默认的left/top
+      //dom.style.top = -(IMG_H - WIN_H) / 2 + 'px';
+       dom.style.left = -(IMG_W - WIN_W) / 2 + 'px';
+        window.addEventListener('deviceorientation', function (evt) {
+            nowts = new Date().getTime();
+            // 控制时间片
+            if (nowts  - timefragment > 37) {
+                timefragment = nowts;
+                var alpha = evt.alpha,          //垂直于屏幕的轴 0 ~ 360
+                   // beta = evt.beta,            //横向 X 轴 -180 ~ 180
+                    gamma = evt.gamma;          //纵向 Y 轴 -90 ~ 90
+               // var top = parseInt(dom.style.top, 10) || 0,
+                   var left = parseInt(dom.style.left, 10) || 0;
+                var _top, _left;
+               // _top = top - (beta / 180 * 30);
+                _left = left - (gamma / 90 * 30);
+               // _top = _top >= 0 ? 0 : (_top < (WIN_H - IMG_H) ? (WIN_H - IMG_H) : _top);
+                _left = _left >= 0 ? 0 : (_left < (WIN_W - IMG_W) ? (WIN_W - IMG_W) : _left);
+               // dom.style.top = _top + 'px';
+                dom.style.left = _left + 'px';
+            }
+        }, false);
+    }
+//点点点出现消失
+{
+    var lent=0;
+    var data=parseInt($('.in-to').find('i').length);
+    var set=setInterval(function(){
+        if(lent==data){
+            lent=0;
+            $('.in-to').find('i').css('display','none');
+            $('.in-to').find('i').eq(lent).css('display','block');
+            lent+=1;
+        }else{
+            $('.in-to').find('i').eq(lent).css('display','block');
+            lent+=1;
+        }
+    },500);
+}
+
+//烟雾动画
+{
+    var yanLent=0;
+    var datayan=parseInt($('.three-02').find('img').length);
+    var yanSet=setInterval(function(){
+        if(yanLent==datayan){
+            yanLent=0;
+            $('.three-02').find('img').attr('style','display:none;width:100%;');
+            $('.three-02').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            yanLent+=1;
+		}else{
+            $('.three-02').find('img').attr('style','display:none;width:100%;');
+            $('.three-02').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            yanLent+=1;
+		}
+	},300)
+}
+
+
+
+
+
+//长条烟雾动画一
+{
+    var twoPWLent=0;
+    var datatwoPW=parseInt($('.two-pw').find('img').length);
+    var twoPWSet=setInterval(function(){
+        if(twoPWLent==datatwoPW){
+            twoPWLent=0;
+            $('.two-pw').find('img').attr('style','display:none;width:100%;');
+            $('.two-pw').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoPWLent+=1;
+		}else{
+            $('.two-pw').find('img').attr('style','display:none;width:100%;');
+            $('.two-pw').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoPWLent+=1;
+		}
+	},200)
+}
+//长条烟雾动画二
+{
+    var twoCarLent=0;
+    var datatwoCar=parseInt($('.two-car').find('img').length);
+    var twoCarSet=setInterval(function(){
+        if(twoCarLent==datatwoCar){
+            twoCarLent=0;
+            $('.two-car').find('img').attr('style','display:none;width:100%;');
+            $('.two-car').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoCarLent+=1;
+		}else{
+            $('.two-car').find('img').attr('style','display:none;width:100%;');
+            $('.two-car').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoCarLent+=1;
+		}
+	},200)
+}
+//无线电
+{
+    var twoCarWx=0;
+    var datatwoCarW=parseInt($('.ctt_03').find('img').length);
+    var twoCarSetW=setInterval(function(){
+        if(twoCarWx==datatwoCarW){
+            twoCarWx=0;
+            $('.ctt_03').find('img').attr('style','display:none;width:100%;');
+            $('.ctt_03').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoCarWx+=1;
+		}else{
+            $('.ctt_03').find('img').attr('style','display:none;width:100%;');
+            $('.ctt_03').find('img').eq(yanLent).attr('style','display:block;width:100%;');
+            twoCarWx+=1;
+		}
+	},200)
+}
+//水柱一
+{
+    var twoCarSz=0;
+    var datatwoCarS=parseInt($('#one9').find('div').length);
+    var twoCarSetW=setInterval(function(){
+        if(twoCarSz==datatwoCarS){
+            twoCarSz=0;
+            $('#one9').find('div').attr('style','display:none;');
+            $('#one9').find('div').eq(twoCarSz).attr('style','display:block;');
+            twoCarSz+=1;
+      }else{
+            $('#one9').find('div').attr('style','display:none;');
+            $('#one9').find('div').eq(twoCarSz).attr('style','display:block;');
+            twoCarSz+=1;
+      }
+   },200)
+}
+//水柱二   
+{
+    var twoCarSz2=0;
+    var datatwoCarS2=parseInt($('#one10').find('div').length);
+    var twoCarSetW2=setInterval(function(){
+        if(twoCarSz2==datatwoCarS2){
+            twoCarSz2=0;
+            $('#one10').find('div').attr('style','display:none;');
+            $('#one10').find('div').eq(yanLent).attr('style','display:block;');
+            twoCarSz2+=1;
+		}else{
+            $('#one10').find('div').attr('style','display:none;');
+            $('#one10').find('div').eq(yanLent).attr('style','display:block;');
+            twoCarSz2+=1;
+		}
+	},200)
+}
+//水管
+{
+    var twoCarSz2=0;
+    var datatwoCarS2=parseInt($('.hs-tu').find('img').length);
+    var twoCarSetW2=setInterval(function(){
+        if(twoCarSz2==datatwoCarS2){
+            twoCarSz2=0;
+            $('.hs-tu').find('img').attr('style','display:none;');
+            $('.hs-tu').find('img').eq(yanLent).attr('style','display:block;');
+            twoCarSz2+=1;
+		}else{
+            $('.hs-tu').find('img').attr('style','display:none;');
+            $('.hs-tu').find('img').eq(yanLent).attr('style','display:block;');
+            twoCarSz2+=1;
+		}
+	},100)
+}
+
+//升降动画
+{
+    var shenjLent=0;
+    var shenjData=parseInt($('#shenjian').find('div').length);
+    var shenjSet=setInterval(function(){
+		if(shenjLent==shenjData){
+		    shenjLent=0;
+		    $('#shenjian').find('div').css('display','none');
+		    $('#shenjian').find('div').eq(shenjLent).css('display','block');
+		    shenjLent+=1;
+		}else{
+            $('#shenjian').find('div').css('display','none');
+            $('#shenjian').find('div').eq(shenjLent).css('display','block');
+            shenjLent+=1;
+        }
+	},250);
+}
+
+//点击弹出二维码识别
+$('#wei-09').click(function(){
+	$('#row1').attr('style','display:block;opacity:1;');
+});
+//点击关闭弹出二维码识别
+
+$('#row1').click(function(){
+	$(this).attr('style','display:none;opacity:0;');
+});
+
+
+//第三页点击向下
+
+$('.oclick').click(function(){
+//取消飞去的src
+document.getElementById('xint').src='';
+xint=0;
+ $('#hidden').val('0');
+    $('.oclick').attr('style','transform:rotate(3deg);transition: 0.5s;')
+    setTimeout(function(){$('.oclick').attr('style','transform:rotate(-3deg);transition: 0.3s;')},300);
+    setTimeout(function(){$('.oclick').attr('style','transform:rotate(3deg);transition: 0.3s;')},600);
+    setTimeout(function(){$('.oclick').attr('style','transform:rotate(0);transition: 0.2s;')},800);
+    setTimeout(function(){
+        $('.oclick').attr('style','left:3.2rem;transition: 1s;');
+     $('.two-my').attr('style','display:none');
+
+    },1000);
+    setTimeout(function(){
+        qie('content','content1');
+       $('body,html').scrollTop=0;
+    },2000)
+	setTimeout(function(){
+	    $('.oclick').attr('style','');
+        $('.two-my').attr('style','');
+	},3000);
+   
+	
+});
+
+//第三页点击向上
+$('#one-p').click(function(){
+    qieTop('content','guide1');
+	$('#hidden').val('1');
+});
+
+/*
+//第四页书
+$('.three-shu').click(function(){
+    setTimeout(function(){$('#row').attr('style','display:block;opacity:1');},0);
+});
+*/
+//第四页书
+$('.three-shu').click(function(){
+    setTimeout(function(){$('#row').attr('style','display:block;opacity:1');},0);
+    setTimeout(function(){
+        $('.row-cent').attr('style','-webkit-animation:bat 30s infinite linear');
+	},10);
+    setTimeout(function(){
+        $('.row-cent').attr('style','');
+        $('.row-cent').addClass('bat');
+        var htmlData="<div class='bate'></div>";
+        $('.row-cent').html(htmlData);
+	},30000)
+});
+
+//点击取消遮罩
+$('#caca').on('click',function(){
+        $('#row').attr('style','display:none');
+        $('.row-cent').attr('style','');
+        $('.row-cent').removeClass('bat');
+        const k='';
+        $('.row-cent').html(k);
+});
+
+//第四页点击向上
+$('#content1-top').click(function(){
+    qieTop('content1','content');
+});
+
+/*
+//第四页点击向下
+$('#row-cent').click(function(){
+    qie('content1','wei');
+});
+*/
+//第四页点击向下
+$('.three-op').click(function(){
+    $('#hidden').val('0');
+    $('.three-op').attr('style','transform:rotate(3deg);transition: 0.5s;')
+    setTimeout(function(){$('.three-op').attr('style','transform:rotate(-3deg);transition: 0.3s;')},300);
+    setTimeout(function(){$('.three-op').attr('style','transform:rotate(3deg);transition: 0.3s;')},600);
+    setTimeout(function(){$('.three-op').attr('style','transform:rotate(0);transition: 0.2s;')},800);
+    setTimeout(function(){
+	   
+        $('.three-op').attr('style','left:3.2rem;transition: 1s;');
+        $('.three-men').css('display','none');
+    },1000);
+    setTimeout(function(){
+        qie('content1','wei');
+
+
+    },2000)
+	setTimeout(function(){
+	    $('.three-op').attr('style','');
+	    $('.three-men').attr('style','');
+	},3000);
+});
+
+
+
+
+//第五页点击切换过去上一页
+$('#wei-top').click(function(){
+    qieTop('wei','content1');
+});
+
+//下一页切换 tis为当前页，nex为需要切换到的目标页
+var qie=function (tis,nex){
+    $('#'+tis).attr('style','transition:1s;opacity:0;');
+    setTimeout(function(){
+        $('#'+tis).attr('style','display:none');
+        window.location.hash='#'+nex;
+        $(document).scrollTop(0);
+        $(window).scrollTop(0);
+        $('#'+nex).attr('style','transition:1s;opacity:1;display:block;');
+    },1500);
+}
+//上一页切换 tis为当前页，nex为需要切换到的目标页
+var qieTop=function (tis,nex){
+    $('#'+tis).attr('style','transition:1s;opacity:0;');
+    setTimeout(function(){
+        $('#'+tis).attr('style','display:none');
+        $('#'+nex).attr('style','transition:1s;opacity:1;display:block;');
+    },1500);
+}
+
+
+
+//第二页点击
+function dian(){
+  $('#hidden').val('1');
+    $('#men').attr('style','transform:rotate(3deg);transition: 0.5s;')
+    setTimeout(function(){$('#men').attr('style','transform:rotate(-3deg);transition: 0.3s;')},300);
+    setTimeout(function(){$('#men').attr('style','transform:rotate(3deg);transition: 0.3s;')},600);
+    setTimeout(function(){$('#men').attr('style','transform:rotate(0);transition: 0.2s;')},800);
+    setTimeout(function(){
+        $('#men').attr('style','left:5.53rem;transition: 1s;');
+        $('.happ').css('display','none');
+    },1000);
+    setTimeout(function(){
+        qie('guide1','content');
+
+    },2000)
+	setTimeout(function(){
+	    $('#men').attr('style','');
+	    $('.happ').attr('style','');
+	},3000);
+}
+
+
+
+  var xindata=0;
+  $(window).scroll(function () {
+  
+    if($('#hidden').val()=='1'){
+  
+        var xin1=document.getElementById('one2').offsetTop;
+        var xin_z=document.getElementById('xint');
+        if(xin1>= $(window).scrollTop() && xin1<($(window).scrollTop()+$(window).height())){
+             if(xindata=='0'){
+                xin_z.src='mp3/bj-xt.mp3';
+                xindata+=1;
+			}
+            setTimeout(function(){
+                $('#xin1').addClass('flsh');
+                $('#xin2').addClass('flsh');
+
+            },1000);
+        }
+        //把音乐关掉
+        var plus = document.getElementById("plus").offsetTop;
+        if (plus >= $(window).scrollTop() && plus < ($(window).scrollTop()+$(window).height())) {
+
+            setTimeout(function(){
+                xin_z.src='';
+                xindata=0;
+            },3000)
+
+        }
+
+
+
+        var one3 = document.getElementById("one3-1").offsetTop;
+        if (one3 >= $(window).scrollTop() && one3 < ($(window).scrollTop()+$(window).height())) {
+
+            setTimeout(function(){
+           
+                $('#one3-1').addClass('swi')
+				},1000);
+        }
+        var one3_2 = document.getElementById("one3-2").offsetTop;
+        if (one3_2 >= $(window).scrollTop() && one3_2 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('#one3-2').addClass('swi')},1500);
+            setTimeout(function(){$('#one3-3').addClass('swi')},2000);
+        }
+        var one4_1 = document.getElementById("one4-1").offsetTop;
+        if (one3_2 >= $(window).scrollTop() && one3_2 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('#one4-1').addClass('swi')},1500);
+            setTimeout(function(){$('#one4-2').addClass('swi')},1000);
+            setTimeout(function(){$('#one4-3').addClass('swi')},1500);
+            setTimeout(function(){$('#one4-4').addClass('swi')},2000);
+        }
+
+var tupian1=document.getElementById('tupian-1').offsetTop;
+        if(tupian1 >= $(window).scrollTop() && tupian1 < ($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#tupian-1').attr('style','opacity:1')
+         },2000);
+      }
+var tupian2=document.getElementById('tupian-2').offsetTop;
+        if(tupian2 >= $(window).scrollTop() && tupian1 < ($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#tupian-2').attr('style','opacity:1')
+         },2500);
+      }
+var tupian3=document.getElementById('tupian-3').offsetTop;
+        if(tupian3 >= $(window).scrollTop() && tupian1 < ($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#tupian-3').attr('style','opacity:1')
+         },3000);
+      }
+var tupian4=document.getElementById('tupian-4').offsetTop;
+        if(tupian3 >= $(window).scrollTop() && tupian1 < ($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#tupian-4').attr('style','opacity:1')
+         },3500);
+      }
+
+        var luoji  = document.getElementById("one4").offsetTop;
+        if (one4 >= $(window).scrollTop() && one4 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-7').find('i').eq(0).addClass('swi')},1500);
+            setTimeout(function(){$('.one-7').find('i').eq(1).addClass('swi')},2000);
+
+        }
+        var one5 = document.getElementById("one5").offsetTop;
+        if (one5 >= $(window).scrollTop() && one5 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-8').find('i').eq(0).addClass('swi')},2000);
+            setTimeout(function(){$('.one-8').find('i').eq(1).addClass('swi')},1500);
+
+        }
+        var one7 = document.getElementById("one7").offsetTop;
+        if (one7 >= $(window).scrollTop() && one7 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-9').find('i').eq(0).addClass('swi')},1500);
+            setTimeout(function(){$('.one-9').find('i').eq(1).addClass('swi')},2000);
+
+        }
+        var one8 = document.getElementById("one8").offsetTop;
+        if (one8 >= $(window).scrollTop() && one8 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-10').find('i').eq(0).addClass('swi')},1500);
+            setTimeout(function(){$('.one-10').find('i').eq(1).addClass('swi')},2000);
+
+        }
+        var one9 = document.getElementById("one9").offsetTop;
+        if (one9 >= $(window).scrollTop() && one9 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-11').find('i').eq(0).addClass('swi')},1500);
+            setTimeout(function(){$('.one-11').find('i').eq(1).addClass('swi')},2000);
+
+        }
+        var one10 = document.getElementById("one10").offsetTop;
+        if (one10 >= $(window).scrollTop() && one10 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-12').find('i').eq(0).addClass('swi')},1500);
+            setTimeout(function(){$('.one-12').find('i').eq(1).addClass('swi')},2000);
+
+        }
+		
+		
+        var one11 = document.getElementById("one11").offsetTop;
+        if (one11 >= $(window).scrollTop() && one10 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){$('.one-13').find('i').eq(0).addClass('swi')},2500);
+            setTimeout(function(){$('.one-13').find('i').eq(1).addClass('swi')},3000);
+
+        }
+        var one12 = document.getElementById("one12").offsetTop;
+        if (one12 >= $(window).scrollTop() && one12 < ($(window).scrollTop()+$(window).height())) {
+            setTimeout(function(){
+                $('.one-14').find('i').eq(0).addClass('swi')
+            },1500);
+            setTimeout(function(){$('.one-14').find('i').eq(1).addClass('swi')
+            },2000);
+			
+				setTimeout(function(){
+				
+				//飞出音效
+				if(xindata==0){
+					document.getElementById('xint').src='mp3/bj-xiuxiu.mp3';
+					xindata+=1;
+				}
+				$('.fei1').css('animation',' fei1 1s 1');
+				$('.fei2').css('animation',' fei2 1s 1');
+				$('.fei3').css('animation',' fei3 4s 1');
+				$('.fei4').css('animation','fei4 3.5s 1');
+				$('.fei5').css('animation','fei5 3s 1');
+				$('.fei6').css('animation','fei6 2.5s 1');
+				$('.fei7').css('animation','fei7 2s 1');
+				$('.fei8').css('animation','fei8 1.5s 1');
+				$('.fei9').css('animation','fei9 1s 1');
+				$('.fei10').css('animation','fei10 0.5s 2');
+			},1000);
+
+        }
+		}else if($('#hidden').val()=='0'){
+        var threeDian=document.getElementById('three-dian').offsetTop;
+        if(threeDian>= $(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#three-dian').addClass('swi')
+            },1000);
+        }
+        var three01=document.getElementById('three-01').offsetTop;
+        if(threeDian>= $(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#three-01').addClass('swi')
+            },1000);
+        }
+        var threeZ03=document.getElementById('three-z03').offsetTop;
+        if(threeDian>= $(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+		 if(xint==0){
+                document.getElementById('xint').src='mp3/bj-dada.mp3';
+                xint+=1;
+			}
+            setTimeout(function(){
+                $('#three-z03').find('div').eq(0).addClass('swi')
+            },0);
+            setTimeout(function(){
+                $('#three-z03').find('div').eq(1).addClass('swi')
+            },1000);
+        }
+        var three06=document.getElementById('three-06').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#three-06').addClass('swi')
+            },1000);
+        }
+        var three03=document.getElementById('three-03').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#three-03').addClass('swi')
+            },1000);
+        }
+        var wei01=document.getElementById('wei-01').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#wei-01').addClass('swi')
+            },1000);
+        }
+        var wei02=document.getElementById('wei-02').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#wei-02').addClass('swi')
+            },1000);
+        }
+        var wei05=document.getElementById('wei-05').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#wei-05').addClass('swi')
+            },1000);
+        }
+        var wei06=document.getElementById('wei-06').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#wei-06').addClass('swi')
+            },1000);
+        }
+        var wei07=document.getElementById('wei-07').offsetTop;
+        if(three06>=$(window).scrollTop() && threeDian<($(window).scrollTop()+$(window).height())){
+            setTimeout(function(){
+                $('#wei-07').addClass('swi')
+            },1000);
+        }
+		}
+    });
+
+
+
+
+
+//调用
+window.onload=function(){
+$('#go-two').click(function(){
+
+$('.loading').fadeOut();
+$('.loading').remove();
+
+});
+	
+	clearInterval(set);
+
+
+    readyFn();
+
+}
+
+
+</script>
+	</body>
+</html>
